@@ -33,7 +33,7 @@
 # If there is an empty field it is NOT in here! 
 #####
 
-INSERT IGNORE INTO locales_npc_text (entry) SELECT ID FROM npc_text;
+INSERT IGNORE INTO locales_npc_text (ID) SELECT ID FROM npc_text;
 
 SET NAMES 'utf8';
 UPDATE locales_npc_text SET Text0_0_loc3=NULL, Text0_1_loc3=NULL, Text1_0_loc3=NULL, Text1_1_loc3=NULL, Text2_0_loc3=NULL, Text2_1_loc3=NULL, Text3_0_loc3=NULL, Text3_1_loc3=NULL, Text4_0_loc3=NULL, Text4_1_loc3=NULL, Text5_0_loc3=NULL, Text5_1_loc3=NULL, Text6_0_loc3=NULL, Text6_1_loc3=NULL, Text7_0_loc3=NULL, Text7_1_loc3=NULL;
