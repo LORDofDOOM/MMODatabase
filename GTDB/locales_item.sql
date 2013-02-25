@@ -1,13 +1,13 @@
 ################################################################################
 #####                                                                      #####
-#####          GGGGGGGG    TTTTTTTTTT     DDDDDDD    BBBBBBB               #####
-#####         GG               TT         D     DD   B      B              #####
-#####        GG    GGG         TT         D      D   BBBBBBB               #####
-#####         GG     GG        TT         D     DD   B      B              #####
-#####          GGGGGGG         TT         DDDDDDD    BBBBBBB               #####
+#####          GGGGGGGG    MM      MM     DDDDDDD    BBBBBBB               #####
+#####         GG           M M    M M     D     DD   B      B              #####
+#####        GG    GGG     M  M  M  M     D      D   BBBBBBB               #####
+#####         GG     GG    M   MM   M     D     DD   B      B              #####
+#####          GGGGGGG     M        M     DDDDDDD    BBBBBBB               #####
 #####                             CREW                                     #####
 ################################################################################
-# Copyright (C) 2007-2011 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
+# Copyright (C) 2007-2012 GMDB <http://sourceforge.net/projects/gm-db>         #
 #                                                                              #
 # This program is free software: you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -80,6 +80,7 @@ UPDATE locales_item SET name_loc3='Primitiver Kilt' WHERE entry=153;
 UPDATE locales_item SET name_loc3='Primitiver Mantel' WHERE entry=154;
 UPDATE locales_item SET name_loc3='Erfrischendes Quellwasser' WHERE entry=159;
 UPDATE locales_item SET name_loc3='Garricks Kopf' WHERE entry=182;
+UPDATE locales_item SET name_loc3='Martins zerbrochener Stab' WHERE entry=192;
 UPDATE locales_item SET name_loc3='Zerlumpte Stoffweste' WHERE entry=193;
 UPDATE locales_item SET name_loc3='Zerlumpte Stoffhose' WHERE entry=194;
 UPDATE locales_item SET name_loc3='Zerlumpte Stoffstiefel' WHERE entry=195;
@@ -337,7 +338,7 @@ UPDATE locales_item SET name_loc3='Gnollspeichel' WHERE entry=1212;
 UPDATE locales_item SET name_loc3='Gnollarmschienen' WHERE entry=1213;
 UPDATE locales_item SET name_loc3='Gnollprügel' WHERE entry=1214;
 UPDATE locales_item SET name_loc3='Stützgurt' WHERE entry=1215;
-UPDATE locales_item SET name_loc3='Unbekannte Belohnung' WHERE entry=1217;
+UPDATE locales_item SET name_loc3='Unbekannte Belohnung', description_loc3='Es ist nicht bekannt, was die Belohnung sein wird...' WHERE entry=1217;
 UPDATE locales_item SET name_loc3='Schwere Gnollkriegskeule' WHERE entry=1218;
 UPDATE locales_item SET name_loc3='Rotkammmachete' WHERE entry=1219;
 UPDATE locales_item SET name_loc3='Werwolfaxt' WHERE entry=1220;
@@ -835,6 +836,7 @@ UPDATE locales_item SET name_loc3='Großer runder Schild' WHERE entry=2129;
 UPDATE locales_item SET name_loc3='Keule' WHERE entry=2130;
 UPDATE locales_item SET name_loc3='Kurzschwert' WHERE entry=2131;
 UPDATE locales_item SET name_loc3='Kurzstab' WHERE entry=2132;
+UPDATE locales_item SET name_loc3='Kleiner Schild' WHERE entry=2133;
 UPDATE locales_item SET name_loc3='Handaxt' WHERE entry=2134;
 UPDATE locales_item SET name_loc3='Herbeigezaubertes geläutertes Wasser' WHERE entry=2136;
 UPDATE locales_item SET name_loc3='Schnippelmesser' WHERE entry=2137;
@@ -1243,6 +1245,7 @@ UPDATE locales_item SET name_loc3='Rezept: Gewürzter Wolfskebab', description_l
 UPDATE locales_item SET name_loc3='Lichtschmiedeblock' WHERE entry=2702;
 UPDATE locales_item SET name_loc3='Kiste mit Lichtschmiedeblöcken' WHERE entry=2712;
 UPDATE locales_item SET name_loc3='Kopf der alten Rußtatze' WHERE entry=2713;
+UPDATE locales_item SET name_loc3='Monster - Gegenstand, Laterne - Rund' WHERE entry=2715;
 UPDATE locales_item SET name_loc3='Kleiner Messingschlüssel' WHERE entry=2719;
 UPDATE locales_item SET name_loc3='Schlammverschmierte Notiz' WHERE entry=2720;
 UPDATE locales_item SET name_loc3='Heiliges Tuch' WHERE entry=2721;
@@ -1482,6 +1485,7 @@ UPDATE locales_item SET name_loc3='Verstärkter Bogen' WHERE entry=3026;
 UPDATE locales_item SET name_loc3='Schwerer Doppelbogen' WHERE entry=3027;
 UPDATE locales_item SET name_loc3='Schneidenpfeil' WHERE entry=3030;
 UPDATE locales_item SET name_loc3='Robustes Geschoss' WHERE entry=3033;
+-- 3034
 UPDATE locales_item SET name_loc3='Getränkter Kürbis' WHERE entry=3035;
 UPDATE locales_item SET name_loc3='Schwerer Kurzbogen' WHERE entry=3036;
 UPDATE locales_item SET name_loc3='Peitschenholzdoppelbogen' WHERE entry=3037;
@@ -2047,7 +2051,6 @@ UPDATE locales_item SET name_loc3='Hammelkoteletts' WHERE entry=3770;
 UPDATE locales_item SET name_loc3='Wildschweinschenkel' WHERE entry=3771;
 UPDATE locales_item SET name_loc3='Herbeigezaubertes Quellwasser' WHERE entry=3772;
 UPDATE locales_item SET name_loc3='Verkrüppelndes Gift' WHERE entry=3775;
-UPDATE locales_item SET name_loc3='Verkrüppelndes Gift II' WHERE entry=3776;
 UPDATE locales_item SET name_loc3='Lethargiewurzel', description_loc3='Wird von Schurken beim Brauen von Gift verwendet.' WHERE entry=3777;
 UPDATE locales_item SET name_loc3='Gespannter Kompositbogen' WHERE entry=3778;
 UPDATE locales_item SET name_loc3='Kräftige Kriegsaxt' WHERE entry=3779;
@@ -31952,7 +31955,10 @@ UPDATE locales_item SET name_loc3='Sattelgurt des verbundenen Dienens' WHERE ent
 UPDATE locales_item SET name_loc3='Flammengeschmiedeter Sattelgurt' WHERE entry=45185;
 UPDATE locales_item SET name_loc3='Rußbedeckter Mantel' WHERE entry=45186;
 UPDATE locales_item SET name_loc3='Handgelenksschützer des Flammenhüters' WHERE entry=45187;
+UPDATE locales_item SET name_loc3='Welker Seetang' WHERE entry=45188;
+UPDATE locales_item SET name_loc3='Gerissenes Segel' WHERE entry=45189;
 UPDATE locales_item SET name_loc3='Treibholz' WHERE entry=45190;
+UPDATE locales_item SET name_loc3='Leere Muschel' WHERE entry=45191;
 UPDATE locales_item SET name_loc3='Siegel des Streiters' WHERE entry=45192;
 UPDATE locales_item SET name_loc3='Unüberwindbare Inbrunst' WHERE entry=45193;
 UPDATE locales_item SET name_loc3='Verhedderte Angelschnur' WHERE entry=45194;
@@ -34553,6 +34559,7 @@ UPDATE locales_item SET name_loc3='Wiederverwendeter Lavagreifer' WHERE entry=48
 UPDATE locales_item SET name_loc3='Glyphe \'Klaue\'' WHERE entry=48720;
 UPDATE locales_item SET name_loc3='Scherbe des Kristallherzens' WHERE entry=48722;
 UPDATE locales_item SET name_loc3='Talisman der Wiederauferstehung' WHERE entry=48724;
+UPDATE locales_item SET name_loc3='Runentotems Mantelung' WHERE entry=48783;
 UPDATE locales_item SET name_loc3='Wurmlochgenerator: Nordend', description_loc3='Die Dimensionsfaltung ist noch von keinem Forschungsbereich vollständig verstanden worden. Bereithaltung von Fallschirm und medizinischer Notversorgung ist angeraten!' WHERE entry=48933;
 UPDATE locales_item SET name_loc3='Geätztes Band der Kirin Tor' WHERE entry=48954;
 UPDATE locales_item SET name_loc3='Geätzter Fingerreif der Kirin Tor' WHERE entry=48955;

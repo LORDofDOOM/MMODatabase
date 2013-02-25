@@ -7,7 +7,7 @@
 #####          GGGGGGG         TT         DDDDDDD    BBBBBBB               #####
 #####                             CREW                                     #####
 ################################################################################
-# Copyright (C) 2007-2011 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
+# Copyright (C) 2007-2012 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
 #                                                                              #
 # This program is free software: you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -24,9 +24,11 @@
 ################################################################################
 
 #####	trinity_string	#####
-## Stand: TrinityCore2 2011-10-29
+## Stand: TrinityCore2 2012-12-26
 
 ## Übersetzungen für Texte 1205 bis 1224 fehlen noch!
+## Keine Übersetzungen für die Texte 357 bis 362 (mir fällt nix schlaues ein)
+## Keine Übersetzungen für die Texte 9989, 9990, 9993 (mir fällt nix schlaues ein)
 
 SET NAMES 'utf8';
 UPDATE trinity_string SET content_loc3=NULL;
@@ -49,8 +51,8 @@ UPDATE trinity_string SET content_loc3='Alle Spieler gespeichert.' WHERE entry=1
 UPDATE trinity_string SET content_loc3='Es sind derzeit folgende GMs auf diesem Server aktiv:' WHERE entry=16;
 UPDATE trinity_string SET content_loc3='Zurzeit sind keine GMs auf diesem Server eingeloggt.' WHERE entry=17;
 UPDATE trinity_string SET content_loc3='Dies kann nicht ausgeführt werden, während man fliegt.' WHERE entry=18;
-UPDATE trinity_string SET content_loc3='Dies kann in Schlachtfeldern nicht ausgeführt werden.' WHERE entry=19;
-UPDATE trinity_string SET content_loc3='Ziel fliegt, Ihr könnt dies nicht tun.' WHERE entry=20;
+UPDATE trinity_string SET content_loc3='Update time diff: %u..' WHERE entry=19;
+UPDATE trinity_string SET content_loc3='Zeit bis zum herunterfahren/neustart: %s.' WHERE entry=20;
 UPDATE trinity_string SET content_loc3='%s fliegt, Befehl fehlgeschlagen.' WHERE entry=21;
 UPDATE trinity_string SET content_loc3='Ihr sitzt auf keinem Reittier, folglich könnt Ihr auch von keinem absteigen.' WHERE entry=22;
 UPDATE trinity_string SET content_loc3='Kann im Kampf nicht ausgeführt werden.' WHERE entry=23;
@@ -93,6 +95,8 @@ UPDATE trinity_string SET content_loc3='Verwende creature EventAI: %s' WHERE ent
 UPDATE trinity_string SET content_loc3='Spieler online: %u (max %u)' WHERE entry=60;
 UPDATE trinity_string SET content_loc3='Erweiterung bis %u ist jetzt verwendbar.' WHERE entry=61;
 UPDATE trinity_string SET content_loc3='Mindestens ein Parameter ist falsch.' WHERE entry=62;
+UPDATE trinity_string SET content_loc3='Ihr könnt das jetzt nicht machen.' WHERE entry=63;
+
 UPDATE trinity_string SET content_loc3='Allgemeine Ankündigung: ' WHERE entry=100;
 UPDATE trinity_string SET content_loc3='Karte: %u (%s) Zone: %u (%s) Gebiet: %u (%s) Phase: %u\nX: %f Y: %f Z: %f Orientierung: %f\ngrid[%u,%u]Zelle[%u,%u] InstanzID: %u\n ZoneX: %f ZoneY: %f\nGroundZ: %f FloorZ: %f Have height data (Map: %u VMap: %u)' WHERE entry=101;
 UPDATE trinity_string SET content_loc3='%s wird bereits teleportiert.' WHERE entry=102;
@@ -167,7 +171,7 @@ UPDATE trinity_string SET content_loc3='Ihr könnt euch nicht zu euch selber tel
 UPDATE trinity_string SET content_loc3='Server Konsolenbefehl' WHERE entry=172;
 UPDATE trinity_string SET content_loc3='Ihr ändert die Runenmacht von %s auf %i/%i.' WHERE entry=173;
 UPDATE trinity_string SET content_loc3='%s ändert Eure Runenmacht auf %i/%i.' WHERE entry=174;
-UPDATE trinity_string SET content_loc3='Wasserspiegel: %f, Boden: %f, Art: %d, Status: %d' WHERE entry=175;
+UPDATE trinity_string SET content_loc3='Wasserspiegel: %f, Boden: %f, Art: %u, Flags: %u, Status: %d.' WHERE entry=175;
 UPDATE trinity_string SET content_loc3='Keine Auswahl.' WHERE entry=200;
 UPDATE trinity_string SET content_loc3='Objekt GUID ist: lowpart %u highpart %X' WHERE entry=201;
 UPDATE trinity_string SET content_loc3='Der Name war um %i Buchstaben zu lang.' WHERE entry=202;
@@ -325,6 +329,13 @@ UPDATE trinity_string SET content_loc3='Der Titel %u (%s) wurde dem Spieler %s z
 UPDATE trinity_string SET content_loc3='Der Titel %u (%s) wurde dem Spieler %s aus seiner Titelliste entfernt.' WHERE entry=354;
 UPDATE trinity_string SET content_loc3='Der Titel %u (%s) ist jetzt der aktive Titel von Spieler %s.' WHERE entry=355;
 UPDATE trinity_string SET content_loc3='Der aktive Titel von Spieler %s wurde zurückgesetzt.' WHERE entry=356;
+# (357, 'Cheat Command Status:'),
+# (358, 'Godmode: %s.'),
+# (359, 'Casttime: %s.'),
+# (360, 'Cooldown: %s.'),
+# (361, 'Power: %s.'),
+# (362, 'Waterwalk: %s.');
+
 UPDATE trinity_string SET content_loc3='|cffff0000[System-Nachricht]:|rScripts neu geladen' WHERE entry=400;
 UPDATE trinity_string SET content_loc3='Ihr ändert die Berechtigungsstufe von %s auf %i.' WHERE entry=401;
 UPDATE trinity_string SET content_loc3='%s hat Eure Berechtigungsstufe auf %i geändert.' WHERE entry=402;
@@ -480,8 +491,7 @@ UPDATE trinity_string SET content_loc3='%s hat nun alle Zonen aufgedeckt.' WHERE
 UPDATE trinity_string SET content_loc3='%s hat nun nicht mehr alle Zonen aufgedeckt.' WHERE entry=552;
 UPDATE trinity_string SET content_loc3='%s hat alle Zonen für Euch aufgedeckt.' WHERE entry=553;
 UPDATE trinity_string SET content_loc3='%s hat alle Zonen vor Euch verborgen.' WHERE entry=554;
-UPDATE trinity_string SET content_loc3='Schweben eingeschaltet' WHERE entry=555;
-UPDATE trinity_string SET content_loc3='Schweben ausgeschaltet' WHERE entry=556;
+UPDATE trinity_string SET content_loc3='Daten geändert für [GUID: %u, entry: %u, name: %s] Field: %u, Data: %u, mit %s' WHERE entry=555;
 UPDATE trinity_string SET content_loc3='%s hat euren Level auf (%i) erhöht' WHERE entry=557;
 UPDATE trinity_string SET content_loc3='%s hat euren Level auf (%i) verringert' WHERE entry=558;
 UPDATE trinity_string SET content_loc3='%s hat euren Levelfortschritt zurückgesetzt.' WHERE entry=559;
@@ -589,7 +599,7 @@ UPDATE trinity_string SET content_loc3='15 Sekunden, bis die Arenaschlacht begin
 UPDATE trinity_string SET content_loc3='Die Arenaschlacht hat begonnen!' WHERE entry=704;
 UPDATE trinity_string SET content_loc3='Ihr müsst %s warten bevor Ihr wieder sprechen könnt' WHERE entry=705;
 UPDATE trinity_string SET content_loc3='Diese(s) Item(s) hat/haben Probleme mit dem ausrüsten/lagern im Inventar' WHERE entry=706;
-UPDATE trinity_string SET content_loc3='%s möchte nicht gestört werden und kann keine Flüsternachrichten erhalten: %s ' WHERE entry=707;
+UPDATE trinity_string SET content_loc3='%s möchte nicht gestört werden: %s ' WHERE entry=707;
 UPDATE trinity_string SET content_loc3='%s ist abwesend von der Tastatur: %s' WHERE entry=708;
 UPDATE trinity_string SET content_loc3='Bitte nicht stören.' WHERE entry=709;
 UPDATE trinity_string SET content_loc3='Abwesend von der Tastatur' WHERE entry=710;
@@ -728,6 +738,12 @@ UPDATE trinity_string SET content_loc3='Das Senden von Tickets ist verboten.' WH
 UPDATE trinity_string SET content_loc3='Der Charakter %s wurde noch nie gebannt!' WHERE entry=1136;
 UPDATE trinity_string SET content_loc3='Der Dev mode ist an (ON)!' WHERE entry=1137;
 UPDATE trinity_string SET content_loc3='Der Dev mode ist aus (OFF)!' WHERE entry=1138;
+UPDATE trinity_string SET content_loc3='Folge dem Spieler %s (lowguid %u)' WHERE entry=1139;
+UPDATE trinity_string SET content_loc3='Folge dem NPC %s (lowguid %u)' WHERE entry=1140;
+UPDATE trinity_string SET content_loc3='Folge <NULL>' WHERE entry=1141;
+UPDATE trinity_string SET content_loc3='Effect movement' WHERE entry=1142;
+UPDATE trinity_string SET content_loc3='aktuelle Bewegungsflags (moveFlags) des Zieles: %u, moveFlagsExtra: %u.' WHERE entry=1143;
+UPDATE trinity_string SET content_loc3='Bewegungsflags (moveFlgas) auf %u, moveFlagsExtra auf %u geändert.' WHERE entry=1144;
 
 UPDATE trinity_string SET content_loc3='Ihr versucht den Film %u anzusehen, dieser existiert jedoch nicht.' WHERE entry=1200;
 UPDATE trinity_string SET content_loc3='Ihr versucht den Film %u anzusehen, dieser existiert jedoch nicht.' WHERE entry=1201;
@@ -837,9 +853,7 @@ UPDATE trinity_string SET content_loc3='[Kontinent]' WHERE entry=5013;
 UPDATE trinity_string SET content_loc3='[Instanz]' WHERE entry=5014;
 UPDATE trinity_string SET content_loc3='[Schlachtfeld]' WHERE entry=5015;
 UPDATE trinity_string SET content_loc3='[Arena]' WHERE entry=5016;
-UPDATE trinity_string SET content_loc3='[Raid reset Zeit: %s]' WHERE entry=5017;
-UPDATE trinity_string SET content_loc3='[Heroisch reset Zeit: %s]' WHERE entry=5018;
-UPDATE trinity_string SET content_loc3='[Reitbar]' WHERE entry=5019;
+UPDATE trinity_string SET content_loc3='[Raid]' WHERE entry=5017;
 UPDATE trinity_string SET content_loc3='Phasemask: %u' WHERE entry=5020;
 UPDATE trinity_string SET content_loc3='Rüstung: %u' WHERE entry=5021;
 UPDATE trinity_string SET content_loc3='Channelbesitz an die Person übertragen, die als erster dem Channel beitritt: aktiv' WHERE entry=5022;
@@ -851,6 +865,10 @@ UPDATE trinity_string SET content_loc3='Name: %s' WHERE entry=5027;
 UPDATE trinity_string SET content_loc3='Lootid: %u' WHERE entry=5028;
 UPDATE trinity_string SET content_loc3='Zu viele Ergebnisse. (max: %d Ergebnisse)' WHERE entry=5029;
 UPDATE trinity_string SET content_loc3='%s versucht vor Angst davon zu rennen!' WHERE entry=5030;
+UPDATE trinity_string SET content_loc3='AIName: %s ScriptName: %s' WHERE entry=5031;
+UPDATE trinity_string SET content_loc3='Kein Schlachtfeld gefunden.' WHERE entry=5032;
+UPDATE trinity_string SET content_loc3='Kein Erfolgs-Kriterium gefunden.' WHERE entry=5033;
+UPDATE trinity_string SET content_loc3='Kein outdoor PvP gefunden.' WHERE entry=5034;
 
 UPDATE trinity_string SET content_loc3='Ihr müsst mindestens Level %d sein, bevor Ihr sprechen, rufen oder emotes nutzen dürft.' WHERE entry=6604;
 UPDATE trinity_string SET content_loc3='Ihr müsst mindestens Level %d sein, bevor Ihr flüstern dürft.' WHERE entry=6605;
@@ -867,6 +885,28 @@ UPDATE trinity_string SET content_loc3='|cffffff00[|c1f40af20GM Ankündigung von
 UPDATE trinity_string SET content_loc3='Ruhe ist AN für %s' WHERE entry=6616;
 UPDATE trinity_string SET content_loc3='Welt: Verweigere Verbindungen' WHERE entry=7523;
 UPDATE trinity_string SET content_loc3='Welt: Akzeptiere Verbindungen' WHERE entry=7524;
+
+UPDATE trinity_string SET content_loc3='Spieler: %s, Status: %s, Dungeons: %u (%s), Rollen: %s, Kommentar: %s' WHERE entry=9980; 
+UPDATE trinity_string SET content_loc3='LfgGruppe?: %u, Status: %s, Dungeon: %u' WHERE entry=9981;
+UPDATE trinity_string SET content_loc3='Nicht in der Gruppe' WHERE entry=9982;
+UPDATE trinity_string SET content_loc3='Warteschlangen gelöscht.' WHERE entry=9983; 
+UPDATE trinity_string SET content_loc3='Lfg Optionen: %u' WHERE entry=9984; 
+UPDATE trinity_string SET content_loc3='Lfg Optionen wurden geändert.' WHERE entry=9985; 
+UPDATE trinity_string SET content_loc3='Keine' WHERE entry=9986; 
+UPDATE trinity_string SET content_loc3='Rollen Check' WHERE entry=9987; 
+UPDATE trinity_string SET content_loc3='In Warteschlange' WHERE entry=9988; 
+# UPDATE trinity_string SET content_loc3='Proposal' WHERE entry=9989; 
+# UPDATE trinity_string SET content_loc3='Vote Kick' WHERE entry=9990; 
+UPDATE trinity_string SET content_loc3='Im Dungeon' WHERE entry=9991; 
+UPDATE trinity_string SET content_loc3='Dungeon beendet' WHERE entry=9992; 
+#UPDATE trinity_string SET content_loc3='Raid browser' WHERE entry=9993; 
+UPDATE trinity_string SET content_loc3='Tank' WHERE entry=9994; 
+UPDATE trinity_string SET content_loc3='Heiler' WHERE entry=9995; 
+UPDATE trinity_string SET content_loc3='DD' WHERE entry=9996; 
+UPDATE trinity_string SET content_loc3='Führer' WHERE entry=9997; 
+UPDATE trinity_string SET content_loc3='Keiner' WHERE entry=9998; 
+UPDATE trinity_string SET content_loc3='Fehler' WHERE entry=9999; 
+
 UPDATE trinity_string SET content_loc3='Die Horde hat die Kontrolle über den Rundblick übernommen!' WHERE entry=10001;
 UPDATE trinity_string SET content_loc3='Die Allianz hat die Kontrolle über den Rundblick übernommen!' WHERE entry=10002;
 UPDATE trinity_string SET content_loc3='Die Horde hat die Kontrolle über das Stadium übernommen!' WHERE entry=10003;

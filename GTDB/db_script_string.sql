@@ -7,7 +7,7 @@
 #####          GGGGGGG         TT         DDDDDDD    BBBBBBB               #####
 #####                             CREW                                     #####
 ################################################################################
-# Copyright (C) 2007-2011 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
+# Copyright (C) 2007-2012 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
 #                                                                              #
 # This program is free software: you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #

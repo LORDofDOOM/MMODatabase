@@ -1,13 +1,13 @@
 ################################################################################
 #####                                                                      #####
-#####          GGGGGGGG    TTTTTTTTTT     DDDDDDD    BBBBBBB               #####
-#####         GG               TT         D     DD   B      B              #####
-#####        GG    GGG         TT         D      D   BBBBBBB               #####
-#####         GG     GG        TT         D     DD   B      B              #####
-#####          GGGGGGG         TT         DDDDDDD    BBBBBBB               #####
+#####          GGGGGGGG    MM      MM     DDDDDDD    BBBBBBB               #####
+#####         GG           M M    M M     D     DD   B      B              #####
+#####        GG    GGG     M  M  M  M     D      D   BBBBBBB               #####
+#####         GG     GG    M   MM   M     D     DD   B      B              #####
+#####          GGGGGGG     M        M     DDDDDDD    BBBBBBB               #####
 #####                             CREW                                     #####
 ################################################################################
-# Copyright (C) 2007-2011 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
+# Copyright (C) 2007-2012 GMDB <http://sourceforge.net/projects/gm-db>         #
 #                                                                              #
 # This program is free software: you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -25,12 +25,12 @@
 
 
 
-
 #####	areatrigger_tavern	#####
 
 SET NAMES 'utf8';
 
 UPDATE areatrigger_tavern SET name='Westfall - Späherkuppe Gasthaus' WHERE id=71;
+UPDATE areatrigger_tavern SET name='Nesingwarys Expedition' WHERE id=98;
 UPDATE areatrigger_tavern SET name='Strahnbrad' WHERE id=178;
 UPDATE areatrigger_tavern SET name='Der Wald von Elwynn - Goldhain - Gasthaus zur Höhle des Löwen' WHERE id=562;
 UPDATE areatrigger_tavern SET name='Das Rotkammgebirge - Rathaus von Seenhain' WHERE id=682;
@@ -72,10 +72,12 @@ UPDATE areatrigger_tavern SET name='Basislager von Grom\'gol' WHERE id=3886;
 UPDATE areatrigger_tavern SET name='Burg Cenarius' WHERE id=3985;
 UPDATE areatrigger_tavern SET name='Kapelle des hoffnungsvollen Lichts' WHERE id=4058;
 UPDATE areatrigger_tavern SET name='Der Steinkrallengipfel' WHERE id=4090;
-UPDATE areatrigger_tavern SET name='Gasthaus von Tranquillien' WHERE id=4108;
+UPDATE areatrigger_tavern SET name='Gasthaus von Tristessa' WHERE id=4108;
+UPDATE areatrigger_tavern SET name='Oberes Gasthaus von Tristessa' WHERE id=4109;
 UPDATE areatrigger_tavern SET name='Gasthaus der Azurwacht' WHERE id=4240;
 UPDATE areatrigger_tavern SET name='Blutmythosinsel - Gasthaus der Blutwacht' WHERE id=4241;
-UPDATE areatrigger_tavern SET name='Gasthaus von Morgenluft' WHERE id=4265;
+UPDATE areatrigger_tavern SET name='Gasthaus der Morgenluft' WHERE id=4265;
+UPDATE areatrigger_tavern SET name='Gasthaus der Zuflucht der Cenarius' WHERE id=4300;
 UPDATE areatrigger_tavern SET name='Gasthaus von Thrallmar' WHERE id=4336;
 UPDATE areatrigger_tavern SET name='Gasthaus der Ehrenfeste' WHERE id=4337;
 UPDATE areatrigger_tavern SET name='Gasthaus von Zabra\'Jin' WHERE id=4373;
@@ -83,11 +85,14 @@ UPDATE areatrigger_tavern SET name='Gasthaus von Telredor' WHERE id=4374;
 UPDATE areatrigger_tavern SET name='Gasthaus von Garadar' WHERE id=4375;
 UPDATE areatrigger_tavern SET name='Gasthaus von Telaar' WHERE id=4376;
 UPDATE areatrigger_tavern SET name='Gasthaus von Allerias Feste' WHERE id=4377;
+UPDATE areatrigger_tavern SET name='Gasthaus der Steinbrecherfeste' WHERE id=4378;
+UPDATE areatrigger_tavern SET name='Gasthaus der Falkenwacht' WHERE id=4380;
 UPDATE areatrigger_tavern SET name='Gasthaus des Temples von Thelamat' WHERE id=4381;
 UPDATE areatrigger_tavern SET name='Zuflucht des Cenarius' WHERE id=4382;
 UPDATE areatrigger_tavern SET name='Gasthaus der Oreborzuflucht' WHERE id=4383;
 UPDATE areatrigger_tavern SET name='Gasthaus des Falkenplatzes' WHERE id=4486;
 UPDATE areatrigger_tavern SET name='Gasthaus der Donnerfeste' WHERE id=4494;
+UPDATE areatrigger_tavern SET name='Gasthaus des Vorgebirges des alten Hügellands' WHERE id=4498;
 UPDATE areatrigger_tavern SET name='Gasthaus von Sylvanaar' WHERE id=4499;
 UPDATE areatrigger_tavern SET name='Gasthaus der Area 52' WHERE id=4521;
 UPDATE areatrigger_tavern SET name='Gasthaus von Schattenmond' WHERE id=4526;
@@ -97,6 +102,7 @@ UPDATE areatrigger_tavern SET name='Gasthaus von Toshleys Station' WHERE id=4558
 UPDATE areatrigger_tavern SET name='Gasthaus des Altars der Sha\'tar' WHERE id=4577;
 UPDATE areatrigger_tavern SET name='Gasthaus von Mok\'Nathal' WHERE id=4595;
 UPDATE areatrigger_tavern SET name='Gasthaus des Sanktums der Sterne' WHERE id=4607;
+UPDATE areatrigger_tavern SET name='Oberes Gasthaus des Sanktums der Sterne' WHERE id=4608;
 UPDATE areatrigger_tavern SET name='Gasthaus des Ewigen Hains' WHERE id=4640;
 UPDATE areatrigger_tavern SET name='Gasthaus des Morastwinkels' WHERE id=4714;
 UPDATE areatrigger_tavern SET name='Gasthaus der Westwacht' WHERE id=4753;
@@ -130,6 +136,10 @@ UPDATE areatrigger_tavern SET name='Brunnhildar' WHERE id=5200;
 UPDATE areatrigger_tavern SET name='Bergfels\' Zuflucht' WHERE id=5204;
 UPDATE areatrigger_tavern SET name='Nesingwarys Basislager' WHERE id=5217;
 UPDATE areatrigger_tavern SET name='Argentumvorhut' WHERE id=5227;
+UPDATE areatrigger_tavern SET name='Wyrmruhtempel' WHERE id=5314;
+UPDATE areatrigger_tavern SET name='Wyrmruhtempel' WHERE id=5315;
+UPDATE areatrigger_tavern SET name='Wyrmruhtempel' WHERE id=5316;
+UPDATE areatrigger_tavern SET name='Wyrmruhtempel' WHERE id=5317;
 UPDATE areatrigger_tavern SET name='Camp Tunka\'lo' WHERE id=5323;
 UPDATE areatrigger_tavern SET name='Krasus\' Landeplatz' WHERE id=5327;
 

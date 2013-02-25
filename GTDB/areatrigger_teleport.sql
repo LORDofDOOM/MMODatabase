@@ -7,7 +7,7 @@
 #####          GGGGGGG         TT         DDDDDDD    BBBBBBB               #####
 #####                             CREW                                     #####
 ################################################################################
-# Copyright (C) 2007-2011 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
+# Copyright (C) 2007-2012 GMDB / GTDB <http://sourceforge.net/projects/gt-db>  #
 #                                                                              #
 # This program is free software: you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -209,6 +209,8 @@ UPDATE areatrigger_teleport SET name='Azjol-Nerub Hauptausgang (Ausgang)' WHERE 
 UPDATE areatrigger_teleport SET name='Azjol-Nerub Haupteingang (Eingang)' WHERE id=5117;
 UPDATE areatrigger_teleport SET name='Das Ausmerzen von Stratholme (Ausgang)' WHERE id=5148;
 UPDATE areatrigger_teleport SET name='Das Ausmerzen von Stratholme (Eingang)' WHERE id=5150;
+UPDATE areatrigger_teleport SET name='Teleporter, Garms Erhebung -> K3' WHERE id=5187;
+UPDATE areatrigger_teleport SET name='Teleporter, K3 -> Garms Erhebung' WHERE id=5190;
 UPDATE areatrigger_teleport SET name='Naxxramas Haupteingang 1 (Eingang)' WHERE id=5191;
 UPDATE areatrigger_teleport SET name='Naxxramas Haupteingang 2 (Eingang)' WHERE id=5192;
 UPDATE areatrigger_teleport SET name='Naxxramas Haupteingang 3 (Eingang)' WHERE id=5193;
@@ -232,8 +234,14 @@ UPDATE areatrigger_teleport SET name='Archavons Kammer (Ausgang)' WHERE id=5262;
 UPDATE areatrigger_teleport SET name='Brunnen von Dalaran zum Abwasserkanal' WHERE id=5273;
 UPDATE areatrigger_teleport SET name='Gundrak - Nordausgang (Ausgang)' WHERE id=5277;
 UPDATE areatrigger_teleport SET name='Das Auge der Ewigkeit (Eingang)' WHERE id=5290;
+UPDATE areatrigger_teleport SET name='Naxxanar' WHERE id=5332;
+UPDATE areatrigger_teleport SET name='Tempelstadt En\'kilah' WHERE id=5334;
+UPDATE areatrigger_teleport SET name='Naxxanar' WHERE id=5338;
+UPDATE areatrigger_teleport SET name='Naxxanar (Oben)' WHERE id=5340;
 UPDATE areatrigger_teleport SET name='Ulduar (Eingang)' WHERE id=5379;
 UPDATE areatrigger_teleport SET name='Ulduar (Ausgang)' WHERE id=5381;
+UPDATE areatrigger_teleport SET name='Tor Sholazarbecken -> Un\'goro' WHERE id=5461;
+UPDATE areatrigger_teleport SET name='Tor Un\'goro -> Sholazarbecken' WHERE id=5462;
 UPDATE areatrigger_teleport SET name='Prüfung des Kreuzfahrers (Eingang)' WHERE id=5503;
 UPDATE areatrigger_teleport SET name='Prüfung des Champions (Eingang)' WHERE id=5505;
 UPDATE areatrigger_teleport SET name='Prüfung des Kreuzfahrers (Ausgang)' WHERE id=5508;
